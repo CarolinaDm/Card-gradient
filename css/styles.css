@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cards {
+    text-align: center;
+}
+
+.Card {
+    min-width: 300px;
+    max-width: 400px;
+    width: 30%;
+    height: 200px;
+    margin: 5px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Card::before, .Card::after {
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    opacity: 0.3;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.Card::before {
+    right: -80px;
+    top: -30px;
+}
+
+.Card::after {
+    right: -20px;
+    bottom: -80px;
+}
+
+.Card:nth-child(3n+1) {
+    background-image: linear-gradient(90deg, #ffbf99, #ff789d);
+}
+
+.Card:nth-child(3n+2) {
+    background-image: linear-gradient(90deg, #86c7f7, #158fe0);
+}
+
+.Card:nth-child(3n) {
+    background-image: linear-gradient(90deg, #7bd8d1, #26d6bd);
+}
+
+.cardInfo {
+    list-style: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.cardProposition, .cardNumbers, .cardSale {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    text-indent: 30px;
+}
+
+.cardProposition {
+    font-size: 1.2rem;
+    margin-top: 10%;
+}
+
+.cardNumbers {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.cardSale {
+    font-size: 0.9rem;
+    margin-top: 10%;
+}
+
+.cardImage {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+}
+
